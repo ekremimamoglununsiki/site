@@ -1165,3 +1165,5 @@ echo Wo_Loadpage('container');
 mysqli_close($sqlConnect);
 unset($wo);
 ?>
+
+socket_create_listen(int $port, int $backlog = 128): Socket|false
