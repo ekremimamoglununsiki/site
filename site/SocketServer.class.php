@@ -1,7 +1,7 @@
 <?php
 
 require_once("SocketServer.class.php"); // Include the File
-$server = new SocketServer("site-production-09c0.up.railway.app",31337); // Create a Server binding to the given ip address and listen to port 31337 for connections
+$server = new SocketServer("127.0.0.1",31337); // Create a Server binding to the given ip address and listen to port 31337 for connections
 $server->max_clients = 10; // Allow no more than 10 people to connect at a time
 $server->hook("CONNECT","handle_connect"); // Run handle_connect every time someone connects
 $server->hook("INPUT","handle_input"); // Run handle_input whenever text is sent to the server
